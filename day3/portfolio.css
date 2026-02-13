@@ -1,0 +1,239 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: linear-gradient(-45deg, #eef2ff, #e0f7fa, #fce4ec, #e3f2fd);
+    background-size: 300% 300%;
+    animation: gradientBG 12s ease infinite;
+    color: #2d2d2d;
+    line-height: 1.7;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.6);
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 26px;
+    background: linear-gradient(to right, #4f46e5, #00bcd4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #444;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -5px;
+    background: linear-gradient(to right, #4f46e5, #00bcd4);
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #4f46e5;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+section {
+    padding: 70px 100px;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #4f46e5;
+}
+
+article,
+details,
+figure,
+fieldset {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 18px;
+    margin-top: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.06);
+    transition: all 0.35s ease;
+}
+
+article:hover,
+details:hover,
+figure:hover,
+fieldset:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+ol, ul {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+progress {
+    width: 280px;
+    height: 14px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background: #e0e0e0;
+    border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #4f46e5, #00bcd4);
+    border-radius: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+th {
+    background: linear-gradient(to right, #4f46e5, #00bcd4);
+    color: white;
+    padding: 14px;
+    font-weight: 500;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f8ff;
+}
+
+tr:hover {
+    background-color: #e8f0ff;
+    transition: 0.3s;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 8px rgba(79,70,229,0.2);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+button[type="submit"] {
+    background: linear-gradient(to right, #4f46e5, #00bcd4);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(79,70,229,0.3);
+}
+
+button[type="reset"] {
+    background: #e0e0e0;
+}
+
+button[type="reset"]:hover {
+    background: #cfcfcf;
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px
+    }
+}
