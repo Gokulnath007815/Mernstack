@@ -45,7 +45,7 @@
 </head>
 <body>
 
-  <h1>📘 JavaScript Assessment (Advanced Interactive)</h1>
+  <h1> JavaScript Assessment (Advanced Interactive)</h1>
 
   <h2>Section 1 — Variables & Assignment</h2>
   <div class="card">
@@ -105,7 +105,6 @@
   </div>
 
   <script>
-    // Variables demo
     function variablesDemo() {
       let name = "Alex";
       let age = 21;
@@ -115,7 +114,6 @@
         `Name: ${name}<br>Age: ${age}<br>Student: ${isStudent}`;
     }
 
-    // Swap values
     function swapValues() {
       let a = Number(document.getElementById("a").value);
       let b = Number(document.getElementById("b").value);
@@ -126,7 +124,7 @@
         `After Swap → a = ${a}, b = ${b}`;
     }
 
-    // Operators demo
+    
     function operatorsDemo() {
       let n1 = Number(document.getElementById("num1").value);
       let n2 = Number(document.getElementById("num2").value);
@@ -141,7 +139,6 @@
       document.getElementById("opsResult").innerHTML = result;
     }
 
-    // Comparison
     function compare100() {
       let n = Number(document.getElementById("compareNum").value);
       let result =
@@ -151,7 +148,6 @@
       document.getElementById("compareResult").innerText = result;
     }
 
-    // Even/Odd + FizzBuzz
     function fizzBuzz() {
       let n = Number(document.getElementById("fizzNum").value);
       let result = "";
@@ -165,7 +161,6 @@
       document.getElementById("fizzResult").innerText = result;
     }
 
-    // Weekday switch
     function weekDay() {
       let d = Number(document.getElementById("day").value);
       let result;
@@ -183,7 +178,6 @@
       document.getElementById("dayResult").innerText = result;
     }
 
-    // Prime checker
     function checkPrime() {
       let n = Number(document.getElementById("primeNum").value);
       if (n <= 1) {
@@ -199,7 +193,6 @@
       document.getElementById("primeResult").innerText = "Prime Number";
     }
 
-    // Reverse string
     function reverseString() {
       let text = document.getElementById("reverseText").value;
       let reversed = text.split("").reverse().join("");
@@ -208,3 +201,4 @@
   </script>
 </body>
 </html>
+
